@@ -122,10 +122,9 @@
     left: 12%;
 }
 
-.menu-button{
+#menu-button{
     height: 40%;
     width: 20%;
-    border: 1px solid red;
     top:50%;
     position: relative;
     display: flex;
@@ -170,4 +169,24 @@
     position: relative;
     left: 30%;
     text-align: center;
+}
+#add{
+    border: 2px solid orange;
+    color: orange;
+    position: relative;
+    right: -80%;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+#delete{
+    border: 2px solid orange;
+    color: orange;
+    position: relative;
+    right: 30%;
+    border-radius: 15px;
+    padding: 5px;
+}
+#section2Hide{
+    display: none;
 }
