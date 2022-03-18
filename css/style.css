@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#hero{
+    height: 100vh;
+    position: relative;
+
+   
+}
+
+
+#hero-image{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.9);
+    background-image: url(../assets/heroBackground.jpeg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5px);
+
+    /* filter: blur(6px); */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+#top{
+    height: 80%;
+    width: 75%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    display: flex;
+    z-index: 300;
+
+}
+#right{
+    width: 30%;
+    height: 100%;
+    background-color: rgba(255,255,255,.8);
+    border-bottom-right-radius: 5%;
+    border-top-right-radius: 5%;
+   
+
+
+}
+#left{
+    width: 70% !important;
+    height: 100%;
+    background-color: rgba(0,0,0,.97);
+    /* backdrop-filter: blur(10px); */
+    border-bottom-left-radius: 5%;
+    border-top-left-radius: 5%;
+    display: flex;
+    align-items: center;
+    
+
+}
+.menu-list{
+    position: absolute;
+    left:57%;
+    z-index: 500;
+}
+
+.navbar-nav a{
+    color: green !important;
+    font-size: 12px;
+    font-weight: 500;
+}
+#right-pic{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+}
+#right-pic img{
+    /* height: 100%;
+    width: 100%; */
+    object-fit: contain;
+    position: absolute;
+    right:-10%;
+    width: 250%;
+
+
+
+}
+#description{
+    margin-left: 20px;
+    position: relative;
+}
+#description h1{
+    font-size: 45px;
+    font-weight: 800;
+    color: green;
+
+}
+#description h1 span{
+    color: white;
+    font-size: 35px;
+    position: relative;
+    left: 10%;
+    font-style: italic;
+}
+#section2{
+    height: 90vh;
+
+}
+#menu-top{
+     height: 25%;
+     display: flex;
+     justify-content: center;
+}
+#menu-top h2{
+    position: relative;
+    left: 12%;
+}
+
+.menu-button{
+    height: 40%;
+    width: 20%;
+    border: 1px solid red;
+    top:50%;
+    position: relative;
+    display: flex;
+
+}
+#extra{
+    width: 50%;
+    height: 100%;
+    background-color: red;
+}
+#pizza{
+    width: 50%;
+    height: 100%;
+    background-color: saddlebrown;
+
+}
+#menu{
+    height: 80%;
+    width: 80%;
+}
+.card-group{
+    height: 100%;
+    width: 100%;
+
+}
+.card{
+    height:60% ;
+    margin: 20px;
+    border: 1px solid silver;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+}
+.card-img-top{
+    height: 50%;
+    width: 100%;
+    object-fit: contain;
+}
+.card-title{
+    background-color: orange;
+    width:50%;
+    position: relative;
+    left: 30%;
+    text-align: center;
+}
