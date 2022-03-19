@@ -198,3 +198,18 @@
     color: white;
     padding: 5px;
 }
+
+#extras{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.menu{
+    height: 80%;
+    width: 80%;
+    background-color: azure;
+     display: flex;
+    justify-content: center;
+}

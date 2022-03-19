@@ -1,44 +1,49 @@
-`use sctrict`;
+`use scrict`;
+//business logic
 
-let add= document.getElementById("add");
-let remove = document.getElementById("delete")
-let increase = document.getElementById("num")
-let count= 0;
+//constractor 
+
+function Order(pizzaPrice, toppingsPrice , crustPrice){
+    this.pizzaPrice = pizzaPrice;
+    this.toppingsPrice =toppingsPrice;
+    this.crustPrice = crustPrice
+}
+
+
+// odering method attached to prototype
+
+Order.prototype.total = function(){
+    return `${this.pizzaPrice + this.toppingsPrice + this.crustPrice}`
+};
 
 
 //user logic
-//add button on cart
 
-add.addEventListener("click", (e)=>{
- count++
-increase.innerText = count
+let btn = document.getElementById("order");
 
-})
-//remove button cartt
-remove.addEventListener("click", (e)=>{
-    count--
-    
-    increase.innerText = count< 0 ? 0: count;
-
+btn.addEventListener("click", (e)=>{
+    e.preventDefault()
 })
 
+ function requestOrder(){
+     let piza = document.getElementById("pizzaPrice");
+     let toppings = document.getElementById("toppings");
+     let crust = document.getElementById("crust");
+//getting the value of selected item
+     let optionSel =piza.options[piza.selectedIndex];
+     let optionSe2 = toppings.options[toppings.selectedIndex];
+     let optionSel3 = crust.options[crust.selectedIndex];
 
-//business logi
+//getting the text of the selected item
+    let pizzaText = optionSel.text
+    let toppingsText = optionSel2.text
+    let crustText =    optionSel3.text
 
-function Order(size, crust, toppings){
-    this.size = size;
-    this.crust = crust;
-    this.toppings = toppings;
-};
- Order.prototype.totals= function(price1, price2){
-     return price1 + price2;
+//create a new odering object from the oder constructor
+
+let newOrder = new Order()
+
+
+
+
  }
-
-
-    let order  = new Order("small")
-console.log(order.size)
-    console.log(order.totals(200,400));
-
-
-    
-
