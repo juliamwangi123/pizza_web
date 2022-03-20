@@ -3,7 +3,11 @@
 
 //constractor 
 let count =0+1;
+let arr = [];
 
+
+
+//odering constructor
 function Order(pizzaPrice, toppingsPrice , crustPrice){
     this.pizzaPrice = pizzaPrice;
     this.toppingsPrice =toppingsPrice;
@@ -16,6 +20,7 @@ function Order(pizzaPrice, toppingsPrice , crustPrice){
 Order.prototype.total = function(){
     return `${this.pizzaPrice + this.toppingsPrice + this.crustPrice}`
 };
+
 
 //add button on small size pizza
 
@@ -49,10 +54,11 @@ smallBtnCnt= 0+1;
      let crustText =    optionSelect.text
  
  
-     let newOrder = new Order(800,optionSe2, optionSel3);
+     let newOrder = new Order(600,optionSe2, optionSel3);
  
-     bill.innerHTML +=`  ${smallBtnCnt++} Small size pizza  with ${toppingsText} toppings and ${crustText} crust  @ ${newOrder.total()}</br>`;
- 
+     bill.innerHTML +=`  ${smallBtnCnt++}. Small size pizza  with ${toppingsText} toppings and ${crustText} crust  @ ${newOrder.total()}</br>`;
+   ( arr.push(newOrder.total()));
+    // alert(arr)
      
      
  });
@@ -89,12 +95,11 @@ smallBtnCnt= 0+1;
     let newOrder = new Order(800,optionSe2, optionSel3);
     let total = `${mediumCount * newOrder.total()}`
 
-    bill.innerHTML +=`${mediumCount++} medium size pizza  with ${toppingsText} toppings and ${crustText} crust  @ ${newOrder.total()}</br>`;
+    bill.innerHTML +=`${mediumCount++}. medium size pizza  with ${toppingsText} toppings and ${crustText} crust  @ ${newOrder.total()}</br>`;
 
-    
+    ( arr.push(newOrder.total()));
     
 });
-
 //add button on large size pizza
 
 
@@ -131,6 +136,19 @@ largeBtn.addEventListener("click",(e)=>{
 
     let newOrder = new Order(1000,optionSe2, optionSel3);
     // let total = `${largeCount * newOrder.total()}`
-    bill.innerHTML +=`${largeCount++} large size pizza with ${toppingsText} toppings and ${crustText} crust  @ ${newOrder.total()}</br>`;
-} )
+    bill.innerHTML +=`${largeCount++}. large size pizza with ${toppingsText} toppings and ${crustText} crust  @ ${newOrder.total()}</br>`;
+    ( arr.push(newOrder.total()));
+} );
  
+let checkOut =document.querySelector(".checkout");
+checkOut.addEventListener("click", (e)=>{
+    e.preventDefault();
+    
+    let newArr =arr.map((i) => Number(i));
+    let sum =newArr.reduce(function(a,b){
+        return a +b
+    },0)
+
+ let totals = document.getElementById("totals");
+ totals.innerHTML = `${sum}`;
+});

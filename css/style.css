@@ -231,6 +231,8 @@
 #num{
     color: red;
     font-size: 12px;
+    
+
 }
 
 #toppings{
@@ -260,7 +262,7 @@
 
 #oder-summary{
     position: absolute;
-    bottom:-160%;
+    bottom:-180%;
     width: 100%;
     left: 0%;
     display: flex;
