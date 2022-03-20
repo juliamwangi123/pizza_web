@@ -259,14 +259,23 @@
 }
 
 #oder-summary{
-    border: 2px solid red;
     position: absolute;
     bottom:-160%;
     width: 100%;
     left: 0%;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     flex-direction: column;
+    align-items: center;
+    background-color: black;
+}
+.checkout{
+    background-color: green;
+    color: white;
+    padding: 5px;
+    width: 100px;
+    display: block;
+
 }
 
 
