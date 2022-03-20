@@ -103,7 +103,7 @@
 
 }
 #description h1 span{
-    color: white;
+    color:orange;
     font-size: 35px;
     /* position: relative; */
     left: 10%;
@@ -178,11 +178,12 @@
     object-fit: contain;
 }
 .card-title{
-    background-color: orange;
+    background-color: green;
     width:50%;
     position: relative;
     left: 30%;
     text-align: center;
+    color: white;
 }
 #add{
     border: 2px solid orange;
@@ -260,9 +261,12 @@
 #oder-summary{
     border: 2px solid red;
     position: absolute;
-    bottom:-180%;
+    bottom:-160%;
     width: 100%;
-    left: 0;
+    left: 0%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 
