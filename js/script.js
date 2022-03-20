@@ -131,6 +131,7 @@ largeBtn.addEventListener("click",(e)=>{
 
 
     let newOrder = new Order(800,optionSe2, optionSel3);
-    bill.innerHTML =`${largeCount++} large pieces @ ${newOrder.total()}  `;
+    let total = `${largeCount * newOrder.total()}`
+    bill.innerHTML =`${largeCount++} large pieces @ ${newOrder.total()}  total is ${total}`;
 } )
  
