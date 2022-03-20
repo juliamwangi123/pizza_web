@@ -78,7 +78,9 @@ btn.addEventListener("click", (e)=>{
 
 
      let newOrder = new Order(600,optionSe2, optionSel3);
-     bill.innerHTML =`${smallCount++} small pieces @ ${newOrder.total()}  `;
+     let total = `${smallCount * newOrder.total()}`
+
+     bill.innerHTML =`${smallCount++} small pieces @ ${newOrder.total()} total is ${total} `;
      
      
  });
@@ -91,20 +93,31 @@ btn.addEventListener("click", (e)=>{
     e.preventDefault();
     let num=  document.getElementById("num")
     num.innerText=Number( count++)
-    // console.log(count);
 
-
+// re-intizilizing  html select option
     let toppings = document.getElementById("toppings");
     let crust = document.getElementById("crust");
     let bill = document.getElementById("mediumBill");
 
-   //  let optionSel =Number(piza.options[piza.selectedIndex].value);
-    let optionSe2 = Number(toppings.options[toppings.selectedIndex].value);
-    let optionSel3 =Number(crust.options[crust.selectedIndex].value);
+  
+    //getting  the value of selected toppings 
+    let optionSe =toppings.options[toppings.selectedIndex];
+    let optionSe2 =Number(optionSe.value)
+    let optionSelect =crust.options[crust.selectedIndex];
+    let optionSel3 = Number(optionSelect.value)
+
+    
+
+//getting thetext of  selected crust and toppings
+    let toppingsText = optionSe.text
+    let crustText =    optionSelect.text
 
 
     let newOrder = new Order(800,optionSe2, optionSel3);
-    bill.innerHTML =`${mediumCount++} medium pieces @ ${newOrder.total()}  `;
+    let total = `${mediumCount * newOrder.total()}`
+
+    bill.innerHTML +=`large piece  with ${toppingsText} topping and ${crustText} crust  @ ${newOrder.total()}</br>`;
+
     
     
 });
@@ -125,13 +138,23 @@ largeBtn.addEventListener("click",(e)=>{
     let crust = document.getElementById("crust");
     let bill = document.getElementById("largeBill");
 
+  
+
    //  let optionSel =Number(piza.options[piza.selectedIndex].value);
-    let optionSe2 = Number(toppings.options[toppings.selectedIndex].value);
-    let optionSel3 =Number(crust.options[crust.selectedIndex].value);
+    let optionSe =toppings.options[toppings.selectedIndex];
+    let optionSe2 =Number(optionSe.value)
+    let optionSelect =crust.options[crust.selectedIndex];
+    let optionSel3 = Number(optionSelect.value)
+
+    
 
 
-    let newOrder = new Order(800,optionSe2, optionSel3);
-    let total = `${largeCount * newOrder.total()}`
-    bill.innerHTML =`${largeCount++} large pieces @ ${newOrder.total()}  total is ${total}`;
+    let toppingsText = optionSe.text
+    let crustText =    optionSelect.text
+
+
+    let newOrder = new Order(1000,optionSe2, optionSel3);
+    // let total = `${largeCount * newOrder.total()}`
+    bill.innerHTML +=`large piece  with ${toppingsText} topping and ${crustText} crust  @ ${newOrder.total()}</br>`;
 } )
  
