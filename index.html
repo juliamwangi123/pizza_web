@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza House</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/bbb7424702.js" crossorigin="anonymous"></script>    
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -143,19 +144,37 @@
           </tbody>
         </thead>
       </table>
-
+     
+      
+      <!-- <p class="checkout">CHECKOUT</p> -->
     </section>
 
-<div  class="container-fluid" id="oder-summary"  style="height: 60vh;">
+<div  class="container-fluid" id="oder-summary"  style="height: 80vh;">
                   <h3 style="color: white;">Order Summary</h3>
                  <div class="summary" style="color: white;">
                   <p id="totalBill"></p>
                   <p id="mediumBill"></p>
                   <p id="largeBill"></p> 
-                  <p id="totals"></p>
-                  <p id="delivery">Delivery</p>
-                  <p id="pick">Pick Up</p>
+                  <!-- <p id="delivery">Delivery</p>
+                  <p id="pick">Pick Up</p> -->
                   <p class="checkout">CHECKOUT</p>
+                  <p id="charge">Would you like the oder delivered? We charge extra 300 for Delivery</p>
+                  <p id="totals"></p>
+
+                  
+                    
+                  
+                  <div class="btns">
+                    <p id="delivery">Delivery</p>
+                   
+                  <p id="pick">Pick Up</p>
+                  <form id="formPick">
+                    <input  id="name" type="text" placeholder=" your Name:" required>
+                    <input  id="place" type="text" placeholder="place of Delivery?" required>
+                    <input id="send"type="button" value="send">
+          
+                  </form>
+                  </div>
 
 
                  </div>

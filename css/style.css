@@ -262,7 +262,7 @@
 
 #oder-summary{
     position: absolute;
-    bottom:-180%;
+    bottom:-190%;
     width: 100%;
     left: 0%;
     display: flex;
@@ -274,11 +274,62 @@
 .checkout{
     background-color: green;
     color: white;
+    width: 100px;
+    display: block;
+    position: relative;
+    top: 5%;
+    left:35%;
+    padding: 5px;
+    text-align: center;
+
+}
+#delivery{
+    background-color: green;
+    color: white;
     padding: 5px;
     width: 100px;
     display: block;
+    display: inline;
+    margin: 12px;
+    border-radius: 25px;
+    padding: 10px;
+    display: none;
+
+
 
 }
+#pick{
+    background-color: green;
+    color: white;
+    padding: 5px;
+    width: 100px;
+    display: inline;
+    border-radius: 25px;
+    padding: 10px;
+    display: none;
+    position: relative;
+    left: 5%;
+
+
+}
+
+#formPick{
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    display: none;
+}
+#place{
+    margin:10px 0, 10px 0;
+}
+#totals{
+    position: relative;
+    left: 35%;
+}
+#charge{
+    display: none;
+}
+
 
 
 
