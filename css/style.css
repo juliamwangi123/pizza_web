@@ -135,11 +135,19 @@
     width: 50%;
     height: 100%;
     background-color: red;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
 }
 #pizza{
     width: 50%;
     height: 100%;
-    background-color: saddlebrown;
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+
 
 }
 #menu{

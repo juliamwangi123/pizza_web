@@ -28,38 +28,12 @@ btn.addEventListener("click", (e)=>{
 })
 
 
-//order functions
-//  function requestOrder(){
-//      let piza = document.getElementById("pizzaPrice");
-//      let toppings = document.getElementById("toppings");
-//      let crust = document.getElementById("crust");
-//      let bill = document.getElementById("totalBill");
-// //getting the value of selected item
-//      let optionSel =Number(piza.options[piza.selectedIndex].value);
-//      let optionSe2 = Number(toppings.options[toppings.selectedIndex].value);
-//      let optionSel3 =Number(crust.options[crust.selectedIndex].value);
 
-// //getting the text of the selected item
-//     let pizzaText = optionSel.text
-//     let toppingsText = optionSe2.text
-//     let crustText =    optionSel3.text
-
-// //create a new odering object from the oder constructor
-
-// let newOrder = new Order(optionSel,optionSe2, optionSel3);
-// bill.innerHTML +=`1.${newOrder.total()} </br>`
-
-
-
-
-
-//  }
 
  ///
 
  let smallbtn = document.querySelector(".btn1");
- let smallCount =0;
- smallCount++
+ 
 
  smallbtn.addEventListener("click", (e)=>{
      e.preventDefault();
@@ -71,7 +45,7 @@ btn.addEventListener("click", (e)=>{
      //re-intizilizing  html select option
      let toppings = document.getElementById("toppings");
      let crust = document.getElementById("crust");
-     let bill = document.getElementById("mediumBill");
+     let bill = document.getElementById("totalBill");
  
    
      //getting  the value of selected toppings 
@@ -88,7 +62,6 @@ btn.addEventListener("click", (e)=>{
  
  
      let newOrder = new Order(800,optionSe2, optionSel3);
-     let total = `${mediumCount * newOrder.total()}`
  
      bill.innerHTML +=`Small size  with ${toppingsText} topping and ${crustText} crust  @ ${newOrder.total()}</br>`;
  
