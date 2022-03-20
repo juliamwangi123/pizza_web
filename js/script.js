@@ -50,7 +50,7 @@ Order.prototype.total = function(){
  
      let newOrder = new Order(800,optionSe2, optionSel3);
  
-     bill.innerHTML +=`Small size  with ${toppingsText} topping and ${crustText} crust  @ ${newOrder.total()}</br>`;
+     bill.innerHTML +=`Small size pizza  with ${toppingsText} topping and ${crustText} crust  @ ${newOrder.total()}</br>`;
  
      
      
@@ -87,7 +87,7 @@ Order.prototype.total = function(){
     let newOrder = new Order(800,optionSe2, optionSel3);
     let total = `${mediumCount * newOrder.total()}`
 
-    bill.innerHTML +=`medium size  with ${toppingsText} topping and ${crustText} crust  @ ${newOrder.total()}</br>`;
+    bill.innerHTML +=`medium size pizza  with ${toppingsText} topping and ${crustText} crust  @ ${newOrder.total()}</br>`;
 
     
     
@@ -126,6 +126,6 @@ largeBtn.addEventListener("click",(e)=>{
 
     let newOrder = new Order(1000,optionSe2, optionSel3);
     // let total = `${largeCount * newOrder.total()}`
-    bill.innerHTML +=`large size  with ${toppingsText} topping and ${crustText} crust  @ ${newOrder.total()}</br>`;
+    bill.innerHTML +=`large size pizza with ${toppingsText} topping and ${crustText} crust  @ ${newOrder.total()}</br>`;
 } )
  
