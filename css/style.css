@@ -110,7 +110,7 @@
     font-style: italic;
 }
 #section2{
-    height: 90vh;
+    height: 100vh;
     position: relative;
 
 }
@@ -254,7 +254,18 @@
     position: relative;
     top: -15%;
     left: 28%;
+    height: 10%;
 }
+
+#oder-summary{
+    border: 2px solid red;
+    position: absolute;
+    bottom:-180%;
+    width: 100%;
+    left: 0;
+}
+
+
 
 /* @media screen and (max-width:768px){
     #section2{

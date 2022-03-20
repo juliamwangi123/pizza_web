@@ -18,19 +18,6 @@ Order.prototype.total = function(){
 };
 
 
-//user logic
-
-let btn = document.getElementById("order");
-
-btn.addEventListener("click", (e)=>{
-    e.preventDefault();
-    requestOrder()
-})
-
-
-
-
- ///
 
  let smallbtn = document.querySelector(".btn1");
  
