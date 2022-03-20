@@ -255,3 +255,13 @@
     top: -15%;
     left: 28%;
 }
+
+/* @media screen and (max-width:768px){
+    #section2{
+        position: relative;
+    }
+    .table{
+        position: absolute;
+    
+    }
+} */
