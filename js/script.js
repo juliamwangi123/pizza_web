@@ -68,19 +68,30 @@ btn.addEventListener("click", (e)=>{
      console.log(count);
 
 
+     //re-intizilizing  html select option
      let toppings = document.getElementById("toppings");
      let crust = document.getElementById("crust");
-     let bill = document.getElementById("totalBill");
-
-    //  let optionSel =Number(piza.options[piza.selectedIndex].value);
-     let optionSe2 = Number(toppings.options[toppings.selectedIndex].value);
-     let optionSel3 =Number(crust.options[crust.selectedIndex].value);
-
-
-     let newOrder = new Order(600,optionSe2, optionSel3);
-     let total = `${smallCount * newOrder.total()}`
-
-     bill.innerHTML =`${smallCount++} small pieces @ ${newOrder.total()} total is ${total} `;
+     let bill = document.getElementById("mediumBill");
+ 
+   
+     //getting  the value of selected toppings 
+     let optionSe =toppings.options[toppings.selectedIndex];
+     let optionSe2 =Number(optionSe.value)
+     let optionSelect =crust.options[crust.selectedIndex];
+     let optionSel3 = Number(optionSelect.value)
+ 
+     
+ 
+ //getting thetext of  selected crust and toppings
+     let toppingsText = optionSe.text
+     let crustText =    optionSelect.text
+ 
+ 
+     let newOrder = new Order(800,optionSe2, optionSel3);
+     let total = `${mediumCount * newOrder.total()}`
+ 
+     bill.innerHTML +=`Small size  with ${toppingsText} topping and ${crustText} crust  @ ${newOrder.total()}</br>`;
+ 
      
      
  });
