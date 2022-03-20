@@ -78,7 +78,7 @@ btn.addEventListener("click", (e)=>{
 
 
      let newOrder = new Order(600,optionSe2, optionSel3);
-     bill.innerHTML =`${smallCount++} pieces @ ${newOrder.total()}  `;
+     bill.innerHTML =`${smallCount++} small pieces @ ${newOrder.total()}  `;
      
      
  });
@@ -104,8 +104,33 @@ btn.addEventListener("click", (e)=>{
 
 
     let newOrder = new Order(800,optionSe2, optionSel3);
-    bill.innerHTML =`${mediumCount++} pieces @ ${newOrder.total()}  `;
+    bill.innerHTML =`${mediumCount++} medium pieces @ ${newOrder.total()}  `;
     
     
 });
+
+let largeBtn =document.querySelector(".large");
+let largeCount =0;
+largeCount++
+largeBtn.addEventListener("click",(e)=>{
+    e.preventDefault();
+    
+    e.preventDefault();
+    let num=  document.getElementById("num")
+    num.innerText=Number( count++)
+    // console.log(count);
+
+
+    let toppings = document.getElementById("toppings");
+    let crust = document.getElementById("crust");
+    let bill = document.getElementById("largeBill");
+
+   //  let optionSel =Number(piza.options[piza.selectedIndex].value);
+    let optionSe2 = Number(toppings.options[toppings.selectedIndex].value);
+    let optionSel3 =Number(crust.options[crust.selectedIndex].value);
+
+
+    let newOrder = new Order(800,optionSe2, optionSel3);
+    bill.innerHTML =`${largeCount++} large pieces @ ${newOrder.total()}  `;
+} )
  
