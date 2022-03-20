@@ -2,6 +2,7 @@
 //business logic
 
 //constractor 
+let count =0+1;
 
 function Order(pizzaPrice, toppingsPrice , crustPrice){
     this.pizzaPrice = pizzaPrice;
@@ -22,28 +23,89 @@ Order.prototype.total = function(){
 let btn = document.getElementById("order");
 
 btn.addEventListener("click", (e)=>{
-    e.preventDefault()
+    e.preventDefault();
+    requestOrder()
 })
 
- function requestOrder(){
-     let piza = document.getElementById("pizzaPrice");
+
+//order functions
+//  function requestOrder(){
+//      let piza = document.getElementById("pizzaPrice");
+//      let toppings = document.getElementById("toppings");
+//      let crust = document.getElementById("crust");
+//      let bill = document.getElementById("totalBill");
+// //getting the value of selected item
+//      let optionSel =Number(piza.options[piza.selectedIndex].value);
+//      let optionSe2 = Number(toppings.options[toppings.selectedIndex].value);
+//      let optionSel3 =Number(crust.options[crust.selectedIndex].value);
+
+// //getting the text of the selected item
+//     let pizzaText = optionSel.text
+//     let toppingsText = optionSe2.text
+//     let crustText =    optionSel3.text
+
+// //create a new odering object from the oder constructor
+
+// let newOrder = new Order(optionSel,optionSe2, optionSel3);
+// bill.innerHTML +=`1.${newOrder.total()} </br>`
+
+
+
+
+
+//  }
+
+ ///
+
+ let smallbtn = document.querySelector(".btn1");
+ let smallCount =0;
+ smallCount++
+
+ smallbtn.addEventListener("click", (e)=>{
+     e.preventDefault();
+     let num=  document.getElementById("num")
+     num.innerText=Number( count++ )
+     console.log(count);
+
+
      let toppings = document.getElementById("toppings");
      let crust = document.getElementById("crust");
-//getting the value of selected item
-     let optionSel =piza.options[piza.selectedIndex];
-     let optionSe2 = toppings.options[toppings.selectedIndex];
-     let optionSel3 = crust.options[crust.selectedIndex];
+     let bill = document.getElementById("totalBill");
 
-//getting the text of the selected item
-    let pizzaText = optionSel.text
-    let toppingsText = optionSel2.text
-    let crustText =    optionSel3.text
-
-//create a new odering object from the oder constructor
-
-let newOrder = new Order()
+    //  let optionSel =Number(piza.options[piza.selectedIndex].value);
+     let optionSe2 = Number(toppings.options[toppings.selectedIndex].value);
+     let optionSel3 =Number(crust.options[crust.selectedIndex].value);
 
 
+     let newOrder = new Order(600,optionSe2, optionSel3);
+     bill.innerHTML =`${smallCount++} pieces @ ${newOrder.total()}  `;
+     
+     
+ });
 
 
- }
+ let mediumBtn = document.querySelector(".medium");
+ let mediumCount =0;
+ mediumCount++
+ mediumBtn.addEventListener("click", (e)=>{
+    e.preventDefault();
+    let num=  document.getElementById("num")
+    num.innerText=Number( count++)
+    // console.log(count);
+
+
+    let toppings = document.getElementById("toppings");
+    let crust = document.getElementById("crust");
+    let bill = document.getElementById("mediumBill");
+
+   //  let optionSel =Number(piza.options[piza.selectedIndex].value);
+    let optionSe2 = Number(toppings.options[toppings.selectedIndex].value);
+    let optionSel3 =Number(crust.options[crust.selectedIndex].value);
+
+
+    let newOrder = new Order(800,optionSe2, optionSel3);
+    bill.innerHTML =`${mediumCount++} pieces @ ${newOrder.total()}  `;
+    
+    
+});
+ 

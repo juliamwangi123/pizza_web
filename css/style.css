@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -212,4 +213,8 @@
     background-color: azure;
      display: flex;
     justify-content: center;
+}
+#num{
+    color: red;
+    font-size: 12px;
 }
