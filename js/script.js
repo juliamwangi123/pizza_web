@@ -142,6 +142,42 @@ largeBtn.addEventListener("click",(e)=>{
  
 
 
+
+
+//display of total bill if delivery is done
+let send =document.querySelector("#send");
+send.addEventListener("click", (e)=>{
+    e.preventDefault();
+
+    
+    let newArr =arr.map((i) => Number(i));
+    let sum =newArr.reduce(function(a,b){
+        return a +b
+    },0)
+// let charge = document.getElementById("charge")
+ let totals = document.getElementById("totals");
+ totals.innerHTML = `total bill is ${sum +300}`;
+});
+
+
+
+
+//show total bill for self pick up
+let pickUp =document.querySelector("#pick");
+pickUp.addEventListener("click", (e)=>{
+    e.preventDefault();
+
+    
+    let newArr =arr.map((i) => Number(i));
+    let sum =newArr.reduce(function(a,b){
+        return a +b
+    },0)
+// let charge = document.getElementById("charge")
+ let totals = document.getElementById("totals");
+ totals.innerHTML = `total bill is ${sum}`;
+});
+
+//display of the order
 $(document).ready(function(){
     $(".checkout").click(function(){
         $(this).hide();
@@ -170,33 +206,4 @@ $(document).ready(function(){
         alert(`${name} your order will be delivered at ${location}`)
 
     })
-});
-
-
-let send =document.querySelector("#send");
-send.addEventListener("click", (e)=>{
-    e.preventDefault();
-
-    
-    let newArr =arr.map((i) => Number(i));
-    let sum =newArr.reduce(function(a,b){
-        return a +b
-    },0)
-// let charge = document.getElementById("charge")
- let totals = document.getElementById("totals");
- totals.innerHTML = `total bill is ${sum +300}`;
-});
-
-let pickUp =document.querySelector("#pick");
-pickUp.addEventListener("click", (e)=>{
-    e.preventDefault();
-
-    
-    let newArr =arr.map((i) => Number(i));
-    let sum =newArr.reduce(function(a,b){
-        return a +b
-    },0)
-// let charge = document.getElementById("charge")
- let totals = document.getElementById("totals");
- totals.innerHTML = `total bill is ${sum}`;
 });
