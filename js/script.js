@@ -144,6 +144,7 @@ let checkOut =document.querySelector(".checkout");
 checkOut.addEventListener("click", (e)=>{
     e.preventDefault();
     
+    
     let newArr =arr.map((i) => Number(i));
     let sum =newArr.reduce(function(a,b){
         return a +b
