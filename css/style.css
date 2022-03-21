@@ -278,6 +278,7 @@
     background-image: url(../assets/chicken1.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
+    /* background-position: center; */
 }
 .checkout{
     background-color: green;
@@ -316,7 +317,7 @@
     padding: 10px;
     display: none;
     position: relative;
-    left: 5%;
+    left: 3%;
 
 
 }
