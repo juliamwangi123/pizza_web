@@ -156,7 +156,7 @@ send.addEventListener("click", (e)=>{
     },0)
 // let charge = document.getElementById("charge")
  let totals = document.getElementById("totals");
- totals.innerHTML = `total bill is ${sum +300}`;
+ totals.innerHTML = `Your total bill is ${sum +300}`;
 });
 
 
@@ -174,7 +174,7 @@ pickUp.addEventListener("click", (e)=>{
     },0)
 // let charge = document.getElementById("charge")
  let totals = document.getElementById("totals");
- totals.innerHTML = `total bill is ${sum}`;
+ totals.innerHTML = ` Your total bill is ${sum}`;
 });
 
 //display of the order
