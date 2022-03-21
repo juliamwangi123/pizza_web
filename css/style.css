@@ -141,6 +141,11 @@
     border-bottom-right-radius: 25px;
     border-top-right-radius: 25px;
     border: 2px solid orange;
+    font-size: 20px;
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #pizza{
     width: 50%;
@@ -341,8 +346,7 @@
     font-family: 'Hurricane', cursive;
 }
 
-.fa-solid{
-    color: orange;
+.logo-house{
      position: absolute;
     left: 100%; 
     top: 25%;
