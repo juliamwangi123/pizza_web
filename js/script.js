@@ -4,7 +4,7 @@
 //constractor 
 let count =0+1;
 let arr = [];
-
+let place;
 
 
 //odering constructor
@@ -148,7 +148,6 @@ largeBtn.addEventListener("click",(e)=>{
 let send =document.querySelector("#send");
 send.addEventListener("click", (e)=>{
     e.preventDefault();
-
     
     let newArr =arr.map((i) => Number(i));
     let sum =newArr.reduce(function(a,b){
@@ -191,6 +190,8 @@ $(document).ready(function(){
         $("#pick").hide();
         $("#charge").hide();
         $("#formPick").show()
+        place=  prompt("enter location for delivery")
+
     });
     $("#pick").click(function(){
         $(this).hide()
@@ -202,8 +203,8 @@ $(document).ready(function(){
     $("#send").click(function(){
         $("#formPick").hide()
         let name  = $("#name").val()
-        var location= $("#place").val();
-        alert(`${name} your order will be delivered at ${location}`)
+        // var location= $("#place").val();
+        alert(` your order will be delivered at ${place}`)
 
     })
 });
